@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/crate/1.2/context",
     {
       "@vocab": "http://schema.org/"
     }
@@ -16,7 +16,7 @@
       },
       "license": "GPL-3.0",
       "conformsTo": {
-        "@id": "https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/main/profiles/sossplus-profile.md"
+        "@id": "https://w3id.org/ldac/profile"
       },
       "hasResource": 
         {
