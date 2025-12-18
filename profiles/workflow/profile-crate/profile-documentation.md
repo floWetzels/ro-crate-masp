@@ -102,6 +102,11 @@ At least 1 instances of this type MUST be present in the crate.
 | <a href="#property-id">@id</a> | Yes | The RO-Crate Metadata  |  | ro-crate-metadata.json |
 | <a href="#property-about">about <a href="#property-about" target="_blank" rel="noopener">ⓘ</a></a> | Yes | This property on the RO-Crate Metadata Descriptor references the Root Data Entity. | <a href="#class-root-data-entity">Root Data Entity</a> |  |
 
+### Examples of Type
+#### Examples
+-  [Example-1: https://w3id.org/workflowhub/workflow-ro-crate/1.0](#example-1-https-w3id-org-workflowhub-workflow-ro-crate-1-0)
+
+
 
 ### <a id="class-root-data-entity"></a> Class: Root Data Entity
 
@@ -125,6 +130,11 @@ At least 1 instances of this type MUST be present in the crate.
 | <a href="#property-mainentity">mainEntity <a href="#property-mainentity" target="_blank" rel="noopener">ⓘ</a></a> | Yes | Links the Root Data Entity to the Main Workflow. The RO-Crate MUST contain exactly one Main Workflow. | <a href="#class-main-workflow">Main Workflow</a> |  |
 | <a href="#property-name">name <a href="#property-name" target="_blank" rel="noopener">ⓘ</a></a> | Yes | SHOULD identify the dataset to humans well enough to disambiguate it from other RO-Crates | Text |  |
 
+### Examples of Type
+#### Examples
+-  [Example-1: ./](#example-1)
+
+
 
 ### <a id="class-main-workflow"></a> Class: Main Workflow
 
@@ -142,6 +152,11 @@ At least 1 instances of this type MUST be present in the crate.
 | <a href="#property-programminglanguage">programmingLanguage <a href="#property-programminglanguage" target="_blank" rel="noopener">ⓘ</a></a> | Yes | The programming language used to implement the Main Workflow. This is a string that should be a valid programming language name. | <a href="#class-programming-languages">Programming Languages</a> |  |
 | <a href="#property-image">image <a href="#property-image" target="_blank" rel="noopener">ⓘ</a></a> | No | If _Main Workflow Diagram_ is present, the _Main Workflow_ MUST refer to it via `image`. | <a href="#class-main-workflow-diagram">Main Workflow Diagram</a> |  |
 | <a href="#property-subjectof">subjectOf <a href="#property-subjectof" target="_blank" rel="noopener">ⓘ</a></a> | No | Main Workflow to a workflow description. The RO-Crate MUST contain exactly one Main Workflow Description. | <a href="#class-main-workflow-description">Main Workflow Description</a> |  |
+
+### Examples of Type
+#### Examples
+-  [Example-1: example_workflow.cwl](#example-1-example-workflow-cwl)
+
 
 
 ### <a id="class-main-workflow-description"></a> Class: Main Workflow Description
@@ -199,6 +214,11 @@ Instances of this type SHOULD be present in the crate.
 | @type | Yes |  |  | http://schema.org/Dataset |
 | <a href="#property-id">@id</a> | Yes | The RO-Crate Metadata  |  | test/ |
 
+### Examples of Type
+#### Examples
+-  [Example-1: ./](#example-1)
+
+
 
 ### <a id="class-examples-directory"></a> Class: Examples Directory
 
@@ -217,6 +237,11 @@ Instances of this type SHOULD be present in the crate.
 | @type | Yes |  |  | http://schema.org/Dataset |
 | <a href="#property-id">@id</a> | Yes | The RO-Crate Metadata  |  | examples/ |
 
+### Examples of Type
+#### Examples
+-  [Example-1: ./](#example-1)
+
+
 
 ### <a id="class-main-workflow-diagram"></a> Class: Main Workflow Diagram
 
@@ -232,6 +257,11 @@ Instances of this type MAY be present in the crate.
 | -------- | -------- | ----------- | ----- | ----- |
 | @type | Yes |  |  | http://schema.org/ImageObject, http://schema.org/MediaObject |
 *No properties defined for this class*
+
+
+### Examples of Type
+#### Examples
+-  [Example-1: diagram.svg](#example-1-diagram-svg)
 
 
 ## All Properties
@@ -636,7 +666,7 @@ ID: https://w3id.org/workflowhub/workflow-ro-crate#cwl
 
 ## Provenance
 
-This document was compiled using [generate-soss-docs.js](https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/main/generate-soss-docs.js), based on [profiles/workflow/profile-text.md](https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/main/profiles/workflow/profile-text.md) using a SoSS+ Schema defined in [profiles/workflow/profile-crate/ro-crate-metadata.json](https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/main/profiles/workflow/profile-crate/ro-crate-metadata.json).
+This document was compiled using [generate-soss-docs.js](https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/ldac-profile/generate-soss-docs.js), based on [profiles/workflow/profile-text.md](https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/ldac-profile/profiles/workflow/profile-text.md) using a SoSS+ Schema defined in [profiles/workflow/profile-crate/ro-crate-metadata.json](https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/ldac-profile/profiles/workflow/profile-crate/ro-crate-metadata.json).
 
 
 <!--

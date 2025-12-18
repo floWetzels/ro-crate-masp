@@ -1,6 +1,6 @@
 {
   "@context": [
-    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/crate/1.2/context",
     {
       "ldac": "https://purl.archive.org/language-data-commons/terms#",
       "PrimaryResource": "https://purl.archive.org/language-data-commons/terms#PrimaryText",
