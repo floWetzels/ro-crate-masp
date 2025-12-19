@@ -8,7 +8,7 @@ This repository is for the development of RO-Crate Schemas and Profiles (RO-Crat
 
 We have some [Notes](./docs/requirements-coverage.md) on how this solution addresses [The Notes].
 
-This work builds on previous prototyping by PT Sefton under the banner "SoSS+". This work is hosted on a branch on the Language Data Commons [RO-Crate-Schema-tools repo](https://github.com/Language-Research-Technology/ro-crate-schema-tools/tree/sossplus). That branch has a variety of bits of code and prototype schemas and profiles that are in various states of repair.
+This work builds on previous prototyping by PT Sefton under the banner "SoSS+". This work is hosted on a branch on the Language Data Commons [RO-Crate-Schema-Tools repo](https://github.com/Language-Research-Technology/ro-crate-schema-tools/tree/sossplus). That branch has a variety of bits of code and prototype schemas and profiles that are in various states of repair.
 
 Now that the work is more advanced, I'm moving it to this repository as a "clean" copy where people will be able to try out working code in a more predictable environment on the main branch.
 
@@ -138,17 +138,15 @@ This repository includes several profiles and schemas that can be built using np
 
 - **Workflow Profile**: `npm run build:workflow-profile`
 - **RO-Crate Profile**: `npm run build:ro-crate-profile`
-- **LDAC Profile**: `npm run build:ldac-profile`
-- **LDAC Schema**: `npm run build:ldac-schema`
+- **Language Data Commons (LDAC) Profile**: `npm run build:ldac-profile`
+- **Language Data Commons (LDAC) Schema**: `npm run build:ldac-schema`
+- **AusTalk Schema**: `npm run build:austalk-schema`
 
 
 #### COMING SOON!!
 
-- **Language Data Commons (LDAC) Profile**: `npm run build:ldac-profile`
-- **RO-Crate Profile**: `npm run build:ro-crate-profile`
 - **Generic RepositoryCollection Profile**: `npm run build:generic-profile`
 - **SOA Profile**: `npm run build:soa-profile`
-- **AusTalk Schema**: `npm run build:austalk-schema`
 
 ### Examples
 
@@ -172,7 +170,7 @@ See the result of this profile generation [here](./profiles/workflow/profile-cra
 
 
 Each build command runs the `generate-soss-docs.js` script with three arguments:
-1. Path to the ro-crate-metadata.json file
+1. Path to the `ro-crate-metadata.json` file
 2. Path to the profile/schema text markdown file
 3. Path to the output documentation markdown file
 

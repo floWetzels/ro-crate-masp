@@ -4,9 +4,9 @@ This is a user guide for creating new schemas within `ro-crate-masp`. It uses a 
 
 ## Copy template directory
 
-Make a copy of the `profiles/template/` directory and save this under `profiles/` as well.
+Make a copy of the `schemas/template/` directory and save this under `schemas/` as well.
 ```
-profiles/template
+schemas/template
 ├── schema-crate
 │   ├── ro-crate-metadata.json
 │   └── schema-documentation.md
@@ -48,7 +48,7 @@ Root Data Entity:
     },
     "license": "GPL-3.0",
     "conformsTo": {
-      "@id": "https://github.com/Language-Research-Technology/ro-crate-schema-tools/blob/main/profiles/sossplus-profile.md"
+      "@id": "https://w3id.org/template/example"
     },
     "hasResource": [
       {
@@ -124,7 +124,7 @@ Complete list of the rules available to populate the document:
 
 Add a row for your schema in the `"scripts"` section of `package.json`, updating the `template` sections with your schema descriptor:
 ```
-"build:template-schema": "node generate-soss-docs.js profiles/template/schema-crate/ro-crate-metadata.json profiles/template/schema-text.md profiles/template/schema-crate/schema-documentation.md",
+"build:template-schema": "node generate-soss-docs.js schemas/template/schema-crate/ro-crate-metadata.json schemas/template/schema-text.md schemas/template/schema-crate/schema-documentation.md",
 ```
 
 ## Generate documentation
