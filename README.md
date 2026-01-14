@@ -6,7 +6,7 @@ This repository is for the development of RO-Crate Schemas and Profiles (RO-Crat
 
 [The Notes]: https://docs.google.com/document/d/17WRkGPIGtoQoSPlTbStBKUyHTzjrOZb620S1gdk0ei8/edit?tab=t.0#heading=h.5vdkev2g6ira 
 
-We have some [Notes](./docs/requirements-coverage.md) on how this solution addresses [The Notes].
+We have some [discussion here](./docs/requirements-coverage.md) on how this solution addresses [The Notes].
 
 This work builds on previous prototyping by PT Sefton under the banner "SoSS+". This work is hosted on a branch on the Language Data Commons [RO-Crate-Schema-Tools repo](https://github.com/Language-Research-Technology/ro-crate-schema-tools/tree/sossplus). That branch has a variety of bits of code and prototype schemas and profiles that are in various states of repair.
 
