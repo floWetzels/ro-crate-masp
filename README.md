@@ -19,6 +19,7 @@ If this work goes forward then this repository will probably turn into the home 
 
 This repository contains:
 - Draft Profiles and Schemas, according to the definitions in [The Notes] which are packaged as RO-Crates, with schema rules included as *Contextual Entities*
+  - *Start Here*: There is a [draft profile for _RO-Crate Machine Actionable Schemas and Profile_](profiles/ro-crate-masp/profile-crate/profile-documentation.md) which acts as an introduction.
 - Code (with unit tests) to demonstrate
     - Generating Profile or Schema documentation from a ROC-MASP crate.
     - Validating candidate RO-Crates against a ROC-MASP crate (initial implementation is as Unit-tests only)
