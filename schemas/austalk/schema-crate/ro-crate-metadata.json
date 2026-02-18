@@ -575,7 +575,7 @@
         "@id": "schema:Person"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "schema:Boolean"
       }
     },
     {
@@ -767,7 +767,7 @@
         "@id": "schema:Person"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "schema:Boolean"
       }
     },
     {
@@ -779,7 +779,7 @@
         "@id": "schema:Person"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "schema:Boolean"
       }
     },
     {
@@ -791,7 +791,7 @@
         "@id": "schema:Person"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "schema:Boolean"
       }
     },
     {
@@ -827,7 +827,7 @@
         "@id": "schema:Person"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "schema:Boolean"
       }
     },
     {
@@ -971,7 +971,7 @@
         "@id": "ausnc:AusNCObject"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "schema:Boolean"
       }
     },
     {

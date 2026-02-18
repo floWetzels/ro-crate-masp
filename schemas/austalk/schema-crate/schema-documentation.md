@@ -1,10 +1,10 @@
 ---
-title: AusTalk Vocabulary Terms
+title: AusTalk Vocabulary Schema Terms
 ---
 
-# AusTalk Vocabulary Terms
+# AusTalk Vocabulary Schema Terms
 
-The AusTalk schema is used for describing the AusTalk corpus of Australian English. The schema is based on archive material of the AusTalk static site and other repositories:
+The AusTalk schema is used for describing the AusTalk corpus of Australian English and is published at https://w3id.org/austalk/schema. The schema is based on archive material of the AusTalk static site and other repositories:
 - [austalk-static-site](https://github.com/Alveo/austalk-static-site): The austalk.edu.au website
 - [bigasc-metadata](https://github.com/ptsefton/bigasc-metadata): Code to generate metadata for the AusTalk (Big ASC) corpus
 - [smallasc](https://github.com/Alveo/smallasc)
@@ -44,7 +44,7 @@ Instances of this type MAY be present in the crate.
 | <a href="#property-information-follower">information follower</a> | No | The participant whose role was information follower in the map task. | schema:Text |  |
 | <a href="#property-information-giver">information giver</a> | No | The participant whose role was information giver in the map task. | schema:Text |  |
 | <a href="#property-institution">institution</a> | No | The institution associated with the recording site. | schema:Text |  |
-| <a href="#property-less-than-a-year">less than a year</a> | No | Boolean value true if this person has resided less than a year in the specified town. | schema:Text |  |
+| <a href="#property-less-than-a-year">less than a year</a> | No | Boolean value true if this person has resided less than a year in the specified town. | schema:Boolean |  |
 | <a href="#property-map">map</a> | No | The map being used in the map task. | schema:Text |  |
 | <a href="#property-maptaskcomment">maptaskcomment</a> | No | A comment on the map task. | schema:Text |  |
 | <a href="#property-mothers-birth-state">mothers birth state</a> | No | The state where the mother of this person was born. | schema:Text |  |
@@ -177,7 +177,7 @@ ID: austalk:consent
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| Boolean value true if this person has signed the consent form. | schema:Text | schema:Person |
+| Boolean value true if this person has signed the consent form. | schema:Boolean | schema:Person |
 ### <a id="property-country"></a> Property: country
 
 ID: austalk:country
@@ -289,21 +289,21 @@ ID: austalk:has_hearing_problems
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| Boolean value true if this person has hearing problems. | schema:Text | schema:Person |
+| Boolean value true if this person has hearing problems. | schema:Boolean | schema:Person |
 ### <a id="property-has-hobbies"></a> Property: has hobbies
 
 ID: austalk:has_hobbies
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| Boolean value true if this person has hobbies. | schema:Text | schema:Person |
+| Boolean value true if this person has hobbies. | schema:Boolean | schema:Person |
 ### <a id="property-has-piercings"></a> Property: has piercings
 
 ID: austalk:has_piercings
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| Boolean value true if this person has facial piercings. | schema:Text | schema:Person |
+| Boolean value true if this person has facial piercings. | schema:Boolean | schema:Person |
 ### <a id="property-has-reading-problems"></a> Property: has reading problems
 
 ID: austalk:has_reading_problems
@@ -324,7 +324,7 @@ ID: austalk:has_vocal_training
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| Boolean value true if this person has vocal training. | schema:Text | schema:Person |
+| Boolean value true if this person has vocal training. | schema:Boolean | schema:Person |
 ### <a id="property-health-problems-details"></a> Property: health problems details
 
 ID: austalk:health_problems_details
@@ -408,7 +408,7 @@ ID: austalk:less_than_a_year
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| Boolean value true if this person has resided less than a year in the specified town. | schema:Text | <a href="#class-ausncobject">AusNCObject</a> |
+| Boolean value true if this person has resided less than a year in the specified town. | schema:Boolean | <a href="#class-ausncobject">AusNCObject</a> |
 ### <a id="property-map"></a> Property: map
 
 ID: austalk:map
