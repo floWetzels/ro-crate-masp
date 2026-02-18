@@ -6,14 +6,97 @@ Note: Previous drafts of this work used the term "SoSS+ or SoSS Plus".
 
 
 
-## Aims
+## Background 
 
-The following requirements were used for this work. The requirements are copied from [a document which is available for comment](https://docs.google.com/document/d/17WRkGPIGtoQoSPlTbStBKUyHTzjrOZb620S1gdk0ei8/edit?tab=t.0).
+### Definitions
+
+In the context of this document about RO-Crate profiles, the following terms are used.
+
+| Term | Definition |
+|------|------------|
+| **General Purpose Schema** | A specification/documentation of Classes and Properties of entities and potentially vocabulary terms intended to be used across multiple profiles (E.g. Schema.org, Dublin Core, Darwin Core, et al.). There may be some constraints on the range (expected values) and domain (classes on which a property may occur) but these would typically be more tightly specified in a Profile Specific Schema. A general-purpose schema will typically have inheritance - e.g. a Person is a subClass of Thing. |
+| **Schema Language** | The formalisation used to express a schema. These languages may be couched in terms of describing Ontologies, or Vocabularies. Examples include RDF Schema (RDFS), OWL and SKOS and the simple approach used by Schema.org. |
+| **SoSS (Schema.org Style Schema)** | Schema.org's data model is not particularly well documented, but the Schema for Schema.org is expressed as a set of Class and Property definitions which are available in a JSON-LD format, RO-Crate compatible. SoSS is a hybrid of RDF, RDFS and Schema.org's own property definition. RO-Crate 1.2 specifies using this SoSS approach for adding extra vocabulary terms which are not defined online to RO-Crates and profiles. See the section on existing RO-Crate support. |
+| **Profile Specific Schema** | A schema which has been specialised for use in a particular domain. E.g. for the Language Data Commons there is a general-purpose SoSS for describing language data and context http://w3id.org/ldac/terms and a profile which gives stricter advice about how to use them to make documents for the Language Data Commons of Australia repository: https://w3id.org.ldac/profile. |
+| **Class** | A named type which is applied to entities using the @type property, for example, a Person (people are real-world things but describing them as JSON-LD entities is a representation). RO-Crate uses the RDF Schema (rdfs) version of Class as per Schema.org's data model. |
+| **Property** | An attribute of an entity. RO-Crate uses the RDF version of property (rdf:Property) as per Schema.org's data model. |
+| **Terms** | Terms in a schema or profile are Classes, Properties and Defined Terms. In this document, Defined Terms are other fixed entities defined together with classes or properties. |
+| **Profile** | A profile, as defined by the W3C Profiles Vocabularies, is a specialisation of a standard or specification. Compared to a schema, which defines classes and properties that can be used in many ways, a profile introduces constraints, extensions or combinations that make the standard suitable for a particular purpose. RO-Crate for instance, can be seen as a profile of JSON-LD, which we indicate using conformsTo. Profile Crates are again profiles of RO-Crate, where they may constrain or extend for instance which schemas are used, but also on what entities are expected to be found in the crate. |
+
+
+```mermaid
+graph TD;
+    
+    subgraph sc["Schemas: General purpose descriptions of a domain"]
+      
+    end
+    subgraph profile["Profiles: Specialized subsets of a schema, typically with more syntacic constraints and localized descriptions of terms *in this context*"]
+
+    end
+ 
+
+```
+
+
+
+```mermaid
+graph TD;
+    
+    subgraph sc["Schemas: Example"]
+      schemao["Schema.org"]
+      ldacs["Language Data Commons Profile"]
+
+    end
+    subgraph profile["Profiles: Example"]
+      ldacp["Language Data Commons Profile"]
+    end
+ 
+    ldacs -->|Extends| schemao
+    ldacp -->|Specializes| ldacs
+
+```
+
+Both schemas and profiles can be expressed in RO-Crate MASP
+
+```mermaid
+graph TD;
+    
+    
+    subgraph sc["Schemas: Example"]
+      schemao["Schema.org"]
+      ldacs["Language Data Commons Profile"]
+
+    end
+    subgraph profile["Profiles: Example"]
+      subgraph ldacp["Language Data Commons Profile - RO-Crate"]
+          ldacpc["Profile RO-Crate-metadata.json"]
+          ldacmd["Profile documentation"]
+      end
+    end
+ 
+    ldacs -->|Extends| schemao
+    ldacp -->|Specializes| ldacs
+
+   subgraph v["Validators"]
+      jsv["Javascript"]
+      shcv["Shacl Shapes (w/ wrapper)"]   
+   end
+        
+   
+
+  doco["Documentation Generator"] --> ldacmd
+
+ ldacpc -->|input| doco
+
+    
+   
+
+```
 
 
 
 
-# Background: extending Schema.org Style Schemas into a full "RO-Crate schema language"
+### Background: extending Schema.org Style Schemas into a full "RO-Crate Machine Actionable Schemas and Profiles Language"
 
 
 Schema.org describes its "Schema" using RDF Properties (rdf:Property) and RDF Schema Classes (rdfs:Class), the conventions are described in the Schema.org [Data Model](https://schema.org/docs/datamodel.html).
