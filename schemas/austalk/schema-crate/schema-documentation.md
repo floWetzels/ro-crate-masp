@@ -35,7 +35,7 @@ Instances of this type MAY be present in the crate.
 | <a href="#property-basename">basename</a> | No |  The base name of a media file without path, comprised of the speaker, session, component and prompt numbers. | schema:Text |  |
 | <a href="#property-camerasn0">cameraSN0</a> | No | The serial number of camera 0. | schema:Text |  |
 | <a href="#property-camerasn1">cameraSN1</a> | No | The serial number of camera 1. | schema:Text |  |
-| <a href="#property-channel">channel</a> | No | The channel name of the media file. | schema:Text |  |
+| <a href="#property-channel">channel</a> | No | The channel name of the media file. | <a href="#class-channelterms">ChannelTerms</a> |  |
 | <a href="#property-checksum">checksum</a> | No | The checksum of the media file for integrity verification. | schema:Text |  |
 | <a href="#property-city">city</a> | No | The city of the recording site. | schema:Text |  |
 | <a href="#property-country">country</a> | No | The country in which this person has residential history. | schema:Text |  |
@@ -149,7 +149,7 @@ ID: austalk:channel
 
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
-| The channel name of the media file. | schema:Text | <a href="#class-ausncobject">AusNCObject</a> |
+| The channel name of the media file. | <a href="#class-channelterms">ChannelTerms</a> | <a href="#class-ausncobject">AusNCObject</a> |
 ### <a id="property-checksum"></a> Property: checksum
 
 ID: austalk:checksum
@@ -682,5 +682,50 @@ ID: austalk:vocal_training_details
 | Description | Range | Occurs in Domain(s) |
 | ----------- | ----------- | ----------- |
 | Details of the vocal training of this person. | schema:Text | schema:Person |
+
+
+<br>
+
+## Defined Term Sets
+
+### <a id="defined-term-set-channelterms"></a>Defined Term Set: ChannelTerms
+
+ID: austalk:ChannelTerms
+
+Set of defined terms for austalk:channel.
+
+| Term | Description |
+| ---- | ----------- |
+### <a id="defined-term-boundarydeskmic"></a>Defined Term: BoundaryDeskMic <a href="https://w3id.org/ldac/terms#BoundaryDeskMic" target="_blank" rel="noopener">ⓘ</a>
+ID: austalk:BoundaryDeskMic
+
+Boundary / desk mic - Shure MX391/O. On table, ~ 60cm from speaker.
+
+### <a id="defined-term-leftc2mic"></a>Defined Term: LeftC2Mic <a href="https://w3id.org/ldac/terms#LeftC2Mic" target="_blank" rel="noopener">ⓘ</a>
+ID: austalk:LeftC2Mic
+
+Left C-2 mic - Behringer C-2 microphone. On table, ~60 cm from speaker, to record hands-free voice interaction conditions.
+
+### <a id="defined-term-mainspeakermic"></a>Defined Term: MainSpeakerMic <a href="https://w3id.org/ldac/terms#MainSpeakerMic" target="_blank" rel="noopener">ⓘ</a>
+ID: austalk:MainSpeakerMic
+
+Main speaker mic - a head-worn AudioTechnica AT892c microphone used to record the main speaker in the recordings. This is the primary audio channel for most analyses of the data.
+
+### <a id="defined-term-maptaskramic"></a>Defined Term: MaptaskRAMic <a href="https://w3id.org/ldac/terms#MaptaskRAMic" target="_blank" rel="noopener">ⓘ</a>
+ID: austalk:MaptaskRAMic
+
+Maptask / RA mic - a head-worn AudioTechnica AT892c microphone used to record the research assistant.
+
+### <a id="defined-term-rightc2mic"></a>Defined Term: RightC2Mic <a href="https://w3id.org/ldac/terms#RightC2Mic" target="_blank" rel="noopener">ⓘ</a>
+ID: austalk:RightC2Mic
+
+Right C-2 mic - Behringer C-2 microphone. On table, ~60 cm from speaker, to record hands-free voice interaction conditions.
+
+### <a id="defined-term-strobechannel"></a>Defined Term: StrobeChannel <a href="https://w3id.org/ldac/terms#StrobeChannel" target="_blank" rel="noopener">ⓘ</a>
+ID: austalk:StrobeChannel
+
+Strobe channel - contains GPIO sync signal for aligning recordings.
+
+
 
 

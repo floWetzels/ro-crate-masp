@@ -16,3 +16,7 @@ The AusTalk schema is used for describing the AusTalk corpus of Australian Engli
 
 ${rules.all}
 
+<br>
+
+${rules.allDefinedTermSets}
+

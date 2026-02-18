@@ -79,6 +79,27 @@
           "@id": "austalk:channel"
         },
         {
+          "@id": "austalk:ChannelTerms"
+        },
+        {
+          "@id": "austalk:BoundaryDeskMic"
+        },
+        {
+          "@id": "austalk:LeftC2Mic"
+        },
+        {
+          "@id": "austalk:MainSpeakerMic"
+        },
+        {
+          "@id": "austalk:MaptaskRAMic"
+        },
+        {
+          "@id": "austalk:RightC2Mic"
+        },
+        {
+          "@id": "austalk:StrobeChannel"
+        },
+        {
           "@id": "austalk:checksum"
         },
         {
@@ -426,8 +447,88 @@
         "@id": "ausnc:AusNCObject"
       },
       "rangeIncludes": {
-        "@id": "schema:Text"
+        "@id": "austalk:ChannelTerms"
       }
+    },
+    {
+      "@id": "austalk:ChannelTerms",
+      "@type": "DefinedTermSet",
+      "name": "ChannelTerms",
+      "description": "Set of defined terms for austalk:channel.",
+      "hasDefinedTerm": [
+        {
+          "@id": "austalk:BoundaryDeskMic"
+        },
+        {
+          "@id": "austalk:LeftC2Mic"
+        },
+        {
+          "@id": "austalk:MainSpeakerMic"
+        },
+        {
+          "@id": "austalk:MaptaskRAMic"
+        },
+        {
+          "@id": "austalk:RightC2Mic"
+        },
+        {
+          "@id": "austalk:StrobeChannel"
+        }
+      ]
+    },
+    {
+      "@id": "austalk:BoundaryDeskMic",
+      "@type": "DefinedTerm",
+      "description": "Boundary / desk mic - Shure MX391/O. On table, ~ 60cm from speaker.",
+      "inDefinedTermSet": {
+        "@id": "austalk:ChannelTerms"
+      },
+      "name": "BoundaryDeskMic"
+    },
+    {
+      "@id": "austalk:LeftC2Mic",
+      "@type": "DefinedTerm",
+      "description": "Left C-2 mic - Behringer C-2 microphone. On table, ~60 cm from speaker, to record hands-free voice interaction conditions.",
+      "inDefinedTermSet": {
+        "@id": "austalk:ChannelTerms"
+      },
+      "name": "LeftC2Mic"
+    },
+    {
+      "@id": "austalk:MainSpeakerMic",
+      "@type": "DefinedTerm",
+      "description": "Main speaker mic - a head-worn AudioTechnica AT892c microphone used to record the main speaker in the recordings. This is the primary audio channel for most analyses of the data.",
+      "inDefinedTermSet": {
+        "@id": "austalk:ChannelTerms"
+      },
+      "name": "MainSpeakerMic"
+    },
+    {
+      "@id": "austalk:MaptaskRAMic",
+      "@type": "DefinedTerm",
+      "description": "Maptask / RA mic - a head-worn AudioTechnica AT892c microphone used to record the research assistant.",
+      "inDefinedTermSet": {
+        "@id": "austalk:ChannelTerms"
+      },
+      "name": "MaptaskRAMic"
+    },
+    {
+      "@id": "austalk:RightC2Mic",
+      "@type": "DefinedTerm",
+      "description": "Right C-2 mic - Behringer C-2 microphone. On table, ~60 cm from speaker, to record hands-free voice interaction conditions.",
+      "inDefinedTermSet": {
+        "@id": "austalk:ChannelTerms"
+      },
+      "name": "RightC2Mic"
+    },
+    {
+      "@id": "austalk:StrobeChannel",
+      "@type": "DefinedTerm",
+      "description": "Strobe channel - contains GPIO sync signal for aligning recordings.",
+      "inDefinedTermSet": {
+        "@id": "austalk:ChannelTerms"
+      },
+      "name": "StrobeChannel"
     },
     {
       "@id": "austalk:checksum",
