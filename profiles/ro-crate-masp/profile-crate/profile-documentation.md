@@ -1,8 +1,6 @@
-# "*RO-Crate Schemas and Profiles*" (experimental) for Schema.org style schemas plus additional features for validation
+# RO-Crate MASP Profile for "*RO-Crate Machine Actionable Schemas and Profiles* (MASP)" 
 
-This is a work in progress draft implementing the ideas in [Issue 14 in this repository](https://github.com/Language-Research-Technology/ro-crate-schema-tools/issues/14).
-
-Note: Previous drafts of this work used the term "SoSS+ or SoSS Plus".
+This is a work in progress draft implementing an RO-Crate MASP profile for RO-Crate MASP itself.
 
 
 
