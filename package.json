@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "RO-Crate Machine Actionable Profiles and Schemas tools",
   "main": "index.js",
+  "bin":{
+     "generate-soss-docs": "./generate-soss-docs.js"
+  },
   "scripts": {
     "test": "mocha",
     "build:ldac-profile": "node generate-soss-docs.js profiles/ldac/profile-crate/ro-crate-metadata.json profiles/ldac/profile-text.md profiles/ldac/profile-crate/profile-documentation.md",
