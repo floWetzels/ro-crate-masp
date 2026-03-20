@@ -50,6 +50,9 @@
           "@id": "#Root_Data_Entity"
         },
         {
+          "@id": "#Class_EntryPoint"
+        },
+        {
           "@id": "#Class_MainWorkflow"
         },
         {
@@ -81,6 +84,9 @@
         },
         {
           "@id": "#prop_license_Dataset"
+        },
+        {
+          "@id": "prop_additionalType_EntryPoint"
         },
         {
           "@id": "#Property_mainEntity_Workflow"
@@ -171,6 +177,16 @@
       "name": "Root Data Entity",
       "sh:minCount": 1,
       "sh:maxCount": 1
+    },
+    {
+      "@id": "#Class_EntryPoint",
+      "@type": "rdfs:Class",
+      "prov:specializationOf": {
+        "@id": "http://schema.org/Dataset"
+      },
+      "description": "The Entry Point for an RO-Crate profile. This is the main entity of the profile which is checked for compliance.",
+      "name": "Entry Point",
+      "sh:minCount": 1
     },
     {
       "@id": "#Class_MainWorkflow",
@@ -290,6 +306,21 @@
       "sh:maxCount": 1
     },
     {
+      "@id": "#prop_additionalType_EntryPoint",
+      "@type": "rdf:Property",
+      "prov:specializationOf": {
+        "@id": "http://schema.org/additionalType"
+      },
+      "description": "The additional type of the Entry Point must be 'EntryPoint'.",
+      "name": "additionalType",
+      "domainIncludes": {
+        "@id": "#Class_EntryPoint"
+      },
+      "sh:minCount": 1,
+      "sh:maxCount": 1,
+      "schema:value": "EntryPoint"
+    },
+    {
       "@id": "#prop_description_Dataset",
       "@type": "rdf:Property",
       "rdfs:label": "description",
@@ -298,7 +329,7 @@
         "@id": "http://schema.org/description"
       },
       "domainIncludes": {
-        "@id": "#Root_Data_Entity"
+        "@id": "#Class_EntryPoint"
       },
       "rdfs:comment": "(In addition to the name) SHOULD further elaborate on the name to provide a summary of the context in which the dataset is important.",
       "rangeIncludes": {
@@ -354,11 +385,11 @@
       "prov:specializationOf": {
         "@id": "http://schema.org/mainEntity"
       },
-      "description": "Links the Root Data Entity to the Main Workflow. The RO-Crate MUST contain exactly one Main Workflow.",
+      "description": "Links the Entry Point to the Main Workflow. The RO-Crate MUST contain exactly one Main Workflow.",
       "name": "mainEntity",
       "rdfs:label": "mainEntity",
       "domainIncludes": {
-        "@id": "#Root_Data_Entity"
+        "@id": "#Class_EntryPoint"
       },
       "rangeIncludes": {
         "@id": "#Class_MainWorkflow"
@@ -412,7 +443,7 @@
         "@id": "#Root_Data_Entity_profile_itemList"
       },
       "domainIncludes": {
-        "@id": "#Root_Data_Entity"
+        "@id": "#Class_EntryPoint"
       },
       "sh:minCount": 1,
       "sh:maxCount": 1
@@ -464,9 +495,14 @@
       "domainIncludes": {
         "@id": "#class_CreativeWork_README"
       },
-      "rangeIncludes": {
-        "@id": "#Root_Data_Entity"
-      },
+      "rangeIncludes": [
+         {
+           "@id": "#Root_Data_Entity"
+         },
+         {
+           "@id": "#Class_EntryPoint"
+         }
+        ],
       "sh:minCount": 1,
       "sh:maxCount": 1
     },
@@ -521,7 +557,7 @@
         "@id": "http://schema.org/name"
       },
       "domainIncludes": {
-        "@id": "#Root_Data_Entity"
+        "@id": "#Class_EntryPoint"
       },
       "rdfs:comment": "SHOULD identify the dataset to humans well enough to disambiguate it from other RO-Crates",
       "rangeIncludes": {

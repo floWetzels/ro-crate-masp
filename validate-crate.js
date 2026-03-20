@@ -32,6 +32,7 @@ async function main() {
     const targetCrate = new ROCrate(targetData, { array: true, link: true });
     const profileCrate = new ROCrate(profileData, { array: true, link: true });
     const validator = new SossValidator(profileCrate);
+    validator.verbose = true; // Enable verbose output for debugging
     const results = await validator.validateCrate(targetCrate);
     const errors = results && results.error ? results.error : [];
     if (printJson) {

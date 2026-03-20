@@ -1,0 +1,158 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": [{ "@id": "https://w3id.org/ro/crate/1.1" }]
+    },
+    {
+      "@id": "ro-crate-preview.html",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "Example Dataset",
+      "description": "An example of a composite RO-Crate consisting of multiple workflow RO-Crates",
+      "license": "Apache-2.0",
+      "datePublished": "2025-10-15",
+      "hasPart": [
+        {
+          "@id": "./workflow1"
+        },
+        {
+          "@id": "./workflow2"
+        },
+        {
+          "@id": "./README.md"
+        }
+      ]
+    },
+    {
+      "@id": "./workflow1",
+      "@type": "Dataset",
+      "additionalType": "EntryPoint",
+      "name": "Example Workflow 1",
+      "conformsTo": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+      },
+      "description": "An example workflow",
+      "datePublished": "2025-10-15",
+      "mainEntity": {
+        "@id": "./workflow1/example_workflow.cwl"
+      },
+      "hasPart": [
+        {
+          "@id": "./workflow1/example_workflow.cwl"
+        },
+        {
+          "@id": "./workflow1/diagram.svg"
+        },
+        {
+          "@id": "./workflow1/README.md"
+        }
+      ]
+    },
+    {
+      "@id": "./workflow2",
+      "@type": "Dataset",
+      "additionalType": "EntryPoint",
+      "name": "Example Workflow 2",
+      "conformsTo": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0"
+      },
+      "description": "An example workflow RO-Crate",
+      "datePublished": "2025-10-15",
+      "mainEntity": {
+        "@id": "./workflow2/example_workflow.cwl"
+      },
+      "hasPart": [
+        {
+          "@id": "./workflow2/example_workflow.cwl"
+        },
+        {
+          "@id": "./workflow2/diagram.svg"
+        },
+        {
+          "@id": "./workflow2/README.md"
+        }
+      ]
+    },
+    {
+    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.0",
+    "@type": ["CreativeWork", "Profile"],
+    "name": "Workflow RO-Crate Profile (experimental)",
+    "version": "0.4.0",
+    "description": "This is a profile for RO-Crates that are used to describe workflows -- NOTE have moved the conformsTo to the ROOT Data Entity  as per RO-Crate 1.2"
+    },
+    {
+      "@id": "./workflow1/example_workflow.cwl",
+      "@type": ["File", "SoftwareSourceCode", "ComputationalWorkflow"],
+      "programmingLanguage": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+      },
+      "name": "Example Workflow",
+      "image": {
+        "@id": "./workflow1/diagram.svg"
+      }
+    },
+    {
+      "@id": "./workflow2/example_workflow.cwl",
+      "@type": ["File", "SoftwareSourceCode", "ComputationalWorkflow"],
+      "programmingLanguage": {
+        "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl"
+      },
+      "name": "Example Workflow",
+      "image": {
+        "@id": "./workflow2/diagram.svg"
+      }
+    },
+    {
+      "@id": "./workflow1/diagram.svg",
+      "name": "Example Workflow Diagram",
+      "@type": ["File", "ImageObject"]
+    },
+    {
+      "@id": "./workflow2/diagram.svg",
+      "name": "Example Workflow Diagram",
+      "@type": ["File", "ImageObject"]
+    },
+    {
+      "@id": "./README.md",
+      "@type": "File",
+      "about": "./",
+      "encodingFormat": "text/markdown"
+    },
+    {
+      "@id": "./workflow1/README.md",
+      "@type": "File",
+      "about": "./workflow1",
+      "encodingFormat": "text/markdown"
+    },
+    {
+      "@id": "./workflow2/README.md",
+      "@type": "File",
+      "about": "./workflow2",
+      "encodingFormat": "text/markdown"
+    },
+      {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate#cwl",
+      "@type": "ComputerLanguage",
+      "name": "Common Workflow Language",
+      "alternateName": "CWL",
+      "identifier": {
+        "@id": "https://w3id.org/cwl/v1.2/"
+      },
+      "url": {
+        "@id": "https://www.commonwl.org/"
+      }
+    }
+  ]
+}
